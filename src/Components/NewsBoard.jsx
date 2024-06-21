@@ -3,8 +3,7 @@ import { NewsItem } from "./NewsItem";
 import { ArticleDetail } from "./ArticleDetail";
 
 export const NewsBoard = ({ category }) => {
-  const [articles, setArticles] = useState([]);
-  console.log(articles);
+  const [articles, setArticles] = useState([]);  
   const [query, setQuery] = useState("");
   const [selectedArticle, setSelectedArticle] = useState(null);
 
@@ -61,11 +60,11 @@ export const NewsBoard = ({ category }) => {
         />
       ) : (
         <>
-          <h2 className="text-center my-2">
-            Latest <span className="badge bg-danger">News</span>
+          <h2 className="text-center my-3">
+            <span className="text-light">Latest </span><span className="badge bg-danger">News</span>
           </h2>
 
-          <div className="container">
+          <div className="container my-2">
             <form className="d-flex" role="search">
               <input
                 className="form-control me-2"
@@ -90,7 +89,7 @@ export const NewsBoard = ({ category }) => {
 
           {/* Pagination */}
           <nav>
-            <ul className="pagination justify-content-center">
+            <ul className="pagination justify-content-center bg-dark">
               <li className="page-item">
                 <a href="#" className="page-link" onClick={prevPage}>
                   Prev

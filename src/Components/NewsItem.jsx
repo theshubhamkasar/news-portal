@@ -11,17 +11,15 @@ export const NewsItem = ({ article, onArticleClick }) => {
       <img
         src={article.multimedia[0].url ? article.multimedia[0].url : image}
         style={{ height: "200px", width: "282px" }}
-        className="card-img-top news-card-img"
+        className="card-img-top news-card-img card-image"
         alt="..."
       />
-      <div className="card-body">
-        <h5 className="card-title">{article.title.slice(0, 55)}</h5>
-        <p className="card-text">
+        <p className="card-title">{article.title.slice(0, 55)}</p>
+        <p className="card-body">
           {article.abstract
             ? article.abstract.slice(0, 75)
             : "It is information about something that has just happened. This is the text about something."}
         </p>
-      </div>
     </div>
   );
 };
