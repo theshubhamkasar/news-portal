@@ -30,7 +30,6 @@ export const NewsBoard = ({ category }) => {
   }
 
   useEffect(() => {
-    // let url = `https://newsapi.org/v2/top-headlines?country=in&category=${category}&apiKey=f99fce14a8554db7a905e1fca2e0745c`;
     let url = `https://api.nytimes.com/svc/topstories/v2/${category}.json?api-key=Y72fqfDgVKy9ZIr1sguproxL3Xs3NbWk`;
     fetch(url)
       .then((response) => response.json())
