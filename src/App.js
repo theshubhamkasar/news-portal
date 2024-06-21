@@ -4,7 +4,7 @@ import { NewsBoard } from "./Components/NewsBoard";
 import "./App.css";
 
 function App() {
-  const [category, setCategory] = useState("general");
+  const [category, setCategory] = useState("home");
 
   return (
     <div className="App">

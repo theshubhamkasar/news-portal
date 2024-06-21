@@ -47,15 +47,15 @@ export const Navbar = ({ setCategory }) => {
               </a>
               <a
                 className="dropdown-item"
-                onClick={() => setCategory("health")}
+                onClick={() => setCategory("food")}
               >
-                Health
+                Food
               </a>
               <a
                 className="dropdown-item"
-                onClick={() => setCategory("science")}
+                onClick={() => setCategory("fashion")}
               >
-                Science
+                Fashion
               </a>
               <a
                 className="dropdown-item"
@@ -65,9 +65,9 @@ export const Navbar = ({ setCategory }) => {
               </a>
               <a
                 className="dropdown-item"
-                onClick={() => setCategory("entertainment")}
+                onClick={() => setCategory("theater")}
               >
-                Entertainment
+                Theater
               </a>
             </div>
           </div>

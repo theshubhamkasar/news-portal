@@ -9,7 +9,7 @@ export const NewsItem = ({ article, onArticleClick }) => {
       onClick={onArticleClick}
     >
       <img
-        src={article.urlToImage ? article.urlToImage : image}
+        src={article.multimedia[0].url ? article.multimedia[0].url : image}
         style={{ height: "200px", width: "282px" }}
         className="card-img-top news-card-img"
         alt="..."
@@ -17,13 +17,10 @@ export const NewsItem = ({ article, onArticleClick }) => {
       <div className="card-body">
         <h5 className="card-title">{article.title.slice(0, 55)}</h5>
         <p className="card-text">
-          {article.description
-            ? article.description.slice(0, 75)
+          {article.abstract
+            ? article.abstract.slice(0, 75)
             : "It is information about something that has just happened. This is the text about something."}
         </p>
-        <a href={article.url} className="btn btn-primary">
-          Read More
-        </a>
       </div>
     </div>
   );

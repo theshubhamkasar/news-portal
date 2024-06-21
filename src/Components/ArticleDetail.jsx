@@ -7,12 +7,12 @@ export const ArticleDetail = ({ article, onBackClick }) => {
     <div className="deatailnews">
       <button onClick={onBackClick}>Back to Home</button>
       <h1>{article.title}</h1>
-      <p>By {article.author}</p>
-      <p>{new Date(article.publishedAt).toLocaleString()}</p>
-      <p>{article.content}</p>
-      {(article.urlToImage ? article.urlToImage : image) && (
+      <p>{article.byline || 'Unknown'}</p>
+      <p>{new Date(article.published_date).toLocaleString()}</p>
+      <p>{article.abstract}</p>
+      {(article.multimedia[0].url ? article.multimedia[0].url : image) && (
         <img
-          src={article.urlToImage ? article.urlToImage : image}
+          src={article.multimedia[0].url ? article.multimedia[0].url : image}
           alt={article.title}
           style={{ width: "100%", maxHeight: "427px" }}
         />

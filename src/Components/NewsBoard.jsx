@@ -4,6 +4,7 @@ import { ArticleDetail } from "./ArticleDetail";
 
 export const NewsBoard = ({ category }) => {
   const [articles, setArticles] = useState([]);
+  console.log(articles);
   const [query, setQuery] = useState("");
   const [selectedArticle, setSelectedArticle] = useState(null);
 
@@ -30,15 +31,18 @@ export const NewsBoard = ({ category }) => {
   }
 
   useEffect(() => {
-    let url = `/api/news?country=in&category=${category}`;
+    // let url = `https://newsapi.org/v2/top-headlines?country=in&category=${category}&apiKey=f99fce14a8554db7a905e1fca2e0745c`;
+    let url = `https://api.nytimes.com/svc/topstories/v2/${category}.json?api-key=Y72fqfDgVKy9ZIr1sguproxL3Xs3NbWk`;
     fetch(url)
       .then((response) => response.json())
-      .then((data) => setArticles(data.articles))
+      .then((data) => setArticles(data.results))
       .catch((error) => {
         console.error("Error fetching news:", error);
         return [];
       });
   }, [category]);
+
+  
 
   const handleArticleClick = (article) => {
     setSelectedArticle(article);
