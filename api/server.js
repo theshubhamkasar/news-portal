@@ -13,7 +13,7 @@ const NEWS_API_KEY = 'f99fce14a8554db7a905e1fca2e0745c';
 
 // Route to handle NewsAPI requests
 app.get('/news', async (req, res) => {
-  const { country = 'us', category = 'general' } = req.query;
+  const { country = 'in', category = 'general' } = req.query;
   try {
     const response = await axios.get('https://newsapi.org/v2/top-headlines', {
       params: {

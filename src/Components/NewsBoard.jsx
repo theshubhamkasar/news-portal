@@ -30,7 +30,7 @@ export const NewsBoard = ({ category }) => {
   }
 
   useEffect(() => {
-    let url = `http://localhost:5000/news?country=in&category=${category}`;
+    let url = `/api/news?country=in&category=${category}`;
     fetch(url)
       .then((response) => response.json())
       .then((data) => setArticles(data.articles))
