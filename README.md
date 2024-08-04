@@ -1,0 +1,5 @@
+![news-portal-1](https://github.com/user-attachments/assets/de3bb2e0-90f2-4556-9b0d-0d0f8073fec0)
+![news-portal-2](https://github.com/user-attachments/assets/7a8ce69e-4c10-4cb2-8f46-5db7b457b4c8)
+![news-portal-4](https://github.com/user-attachments/assets/6c8b765c-d834-43da-af30-5e4937492276)
+![news-portal-3](https://github.com/user-attachments/assets/e5e22471-ef19-436e-9985-7e32bc70fdaf)
+![news-portal-5](https://github.com/user-attachments/assets/5d799a66-4252-417a-9ef0-e31414e82f05)
